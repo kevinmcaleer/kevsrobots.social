@@ -1,5 +1,8 @@
 FROM balenalib/raspberry-pi-debian:latest
 # install dependencies
+RUN apt update
+RUN apt upgrade -y
+
 RUN apt install -y git curl wget gnupg apt-transports-https ca-certificates lsb-release sudo
 
 RUN apt install imagemagick ffmpeg libpq-dev libxml2-dev libxslt1-dev file git-core \
